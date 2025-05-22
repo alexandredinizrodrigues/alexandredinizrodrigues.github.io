@@ -1,25 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="pt">
-    <!-- TODO: verificar o script ao final da página-->
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
    <title>DAYLER SISTEMA DE MONITORAMENTO DE TANQUES</title>
-   <meta http-equiv="refresh" content="3"> <!-- Reload automático -->
+   <meta http-equiv="refresh" content="3">
     <style>
        body {
             background-color: black; /* Fundo preto */
             color: white; /* Texto branco */
        }
-
-html, body {  /* new */
-    width: 100%;
-    overflow-x: hidden;
-} 
-        * {
+       html, body {
+       width: 100%;
+           overflow-x: hidden;
+       }
+       * {
             box-sizing: border-box;
-        }
+       }
        .container {
            width: 90%;
            margin: auto;
@@ -27,15 +24,13 @@ html, body {  /* new */
        }
        .chart-row {
            display: flex;
-           flex-wrap: wrap; /* new */
+           flex-wrap: wrap;
            justify-content: center;
            align-items: flex-end;
+           /*height: 220px;*/
            margin-bottom: 0;
-           gap: 0px; /* Reduza ou remova */
+           gap: 0px;
         }
-
-
-
         .bar-container-tanque {
             display: flex;
             flex-direction: row;
@@ -83,6 +78,7 @@ html, body {  /* new */
         }
         .custom-table tr:nth-child(2) td { /* Produto */
             border-bottom: 1px solid rgb(255, 255, 255);
+            font-size: 1vw; /* Baseado na largura da tela */
         }
         .custom-table tr:nth-child(6) td { /* Vol 20 */
             border-bottom: 1px solid rgb(255, 255, 255);
@@ -91,7 +87,7 @@ html, body {  /* new */
             text-align: center;
             font-weight: bold;
             border-bottom: 1px solid rgb(255, 255, 255);
-    }
+        }
         .custom-table tr:nth-child(8) td { /* Time */
             text-align: center;
             color: rgb(252, 252, 252);
@@ -103,41 +99,41 @@ html, body {  /* new */
         <h3><div style="color: rgb(90, 128, 185);">[DAYLER SISTEMA DE MONITORAMENTO DE TANQUES]</div><div>Tanques Sudeste</h3>
         <!-- 5 substituições com visaoTanque_passo3 para cada div -->
 <div class="chart-row">
- <div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #003300, #00FF00);"></div>
+ <div class="bar-container-tanque"><div class="bar" style="height: 132px; background: linear-gradient(to top, #003300, #00FF00);"></div>
                 <table class="custom-table" style="color:#00FF00;">
                     <tr> <!-- tr:nth-child(1) -->
          <td>TQ-01</td>
           <td></td>
      </tr>
      <tr>   <!-- tr:nth-child(2) -->
-         <td>DIESEL MARÍTIMO</td>
+         <td style="font-size: 0.5vw;">DIESEL MARÍTIMO</td>
          <td></td>
      </tr>
      <tr>   <!-- tr:nth-child(3) -->
          <td>Temp.</td>
-         <td>17,5</td>
+         <td>19,9</td>
      </tr>
      <tr>  <!-- tr:nth-child(4) -->
          <td>Nível</td>
-         <td>4053</td>
+         <td>3934</td>
      </tr>
      <tr>  <!-- tr:nth-child(5) -->
          <td>Vol.</td>
-         <td style="color: #FF0000;">140471</td>
+         <td style="color: #FF0000;">136406</td>
      </tr>
      <tr>  <!-- tr:nth-child(6) -->
          <td>Vol.20<sup>o</sup></td>
-         <td>140809</td>
+         <td>136450</td>
      </tr>
      <tr>  <!-- tr:nth-child(7) -->
-         <td colspan="2"  style="color: rgb(255,0,0);" >68% *ALARME*</td>
+         <td colspan="2"  style="color: rgb(255,0,0);" >66% *ALARME*</td>
      </tr>
      <tr>  <!-- tr:nth-child(8) -->
-         <td colspan="2">22:21:09</td>
+         <td colspan="2">13:07:25</td>
      </tr>
  </table>
 </div>
-<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #003333, #00FFFF);"></div>
+<div class="bar-container-tanque"><div class="bar" style="height: 132px; background: linear-gradient(to top, #003333, #00FFFF);"></div>
                 <table class="custom-table" style="color:#00FFFF;">
                     <tr> <!-- tr:nth-child(1) -->
          <td>TQ-02</td>
@@ -149,29 +145,29 @@ html, body {  /* new */
      </tr>
      <tr>   <!-- tr:nth-child(3) -->
          <td>Temp.</td>
-         <td>18,7</td>
+         <td>20,8</td>
      </tr>
      <tr>  <!-- tr:nth-child(4) -->
          <td>Nível</td>
-         <td>3992</td>
+         <td>3874</td>
      </tr>
      <tr>  <!-- tr:nth-child(5) -->
          <td>Vol.</td>
-         <td>174189</td>
+         <td>169110</td>
      </tr>
      <tr>  <!-- tr:nth-child(6) -->
          <td>Vol.20<sup>o</sup></td>
-         <td>174503</td>
+         <td>168996</td>
      </tr>
      <tr>  <!-- tr:nth-child(7) -->
-         <td colspan="2">68%</td>
+         <td colspan="2">66%</td>
      </tr>
      <tr>  <!-- tr:nth-child(8) -->
-         <td colspan="2">22:21:09</td>
+         <td colspan="2">13:07:25</td>
      </tr>
  </table>
 </div>
-<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #331A0D, #FF8040);"></div>
+<div class="bar-container-tanque"><div class="bar" style="height: 132px; background: linear-gradient(to top, #331A0D, #FF8040);"></div>
                 <table class="custom-table" style="color:#FF8040;">
                     <tr> <!-- tr:nth-child(1) -->
          <td>TQ-03</td>
@@ -183,29 +179,29 @@ html, body {  /* new */
      </tr>
      <tr>   <!-- tr:nth-child(3) -->
          <td>Temp.</td>
-         <td>20,4</td>
+         <td>22,8</td>
      </tr>
      <tr>  <!-- tr:nth-child(4) -->
          <td>Nível</td>
-         <td>4060</td>
+         <td>3940</td>
      </tr>
      <tr>  <!-- tr:nth-child(5) -->
          <td>Vol.</td>
-         <td>206753</td>
+         <td>200720</td>
      </tr>
      <tr>  <!-- tr:nth-child(6) -->
          <td>Vol.20<sup>o</sup></td>
-         <td>206730</td>
+         <td>200169</td>
      </tr>
      <tr>  <!-- tr:nth-child(7) -->
-         <td colspan="2">68%</td>
+         <td colspan="2">66%</td>
      </tr>
      <tr>  <!-- tr:nth-child(8) -->
-         <td colspan="2">22:21:09</td>
+         <td colspan="2">13:07:25</td>
      </tr>
  </table>
 </div>
-<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #331A26, #FF80C0);"></div>
+<div class="bar-container-tanque"><div class="bar" style="height: 132px; background: linear-gradient(to top, #331A26, #FF80C0);"></div>
                 <table class="custom-table" style="color:#FF80C0;">
                     <tr> <!-- tr:nth-child(1) -->
          <td>TQ-04</td>
@@ -217,29 +213,29 @@ html, body {  /* new */
      </tr>
      <tr>   <!-- tr:nth-child(3) -->
          <td>Temp.</td>
-         <td>17,1</td>
+         <td>19</td>
      </tr>
      <tr>  <!-- tr:nth-child(4) -->
          <td>Nível</td>
-         <td>4032</td>
+         <td>3914</td>
      </tr>
      <tr>  <!-- tr:nth-child(5) -->
          <td>Vol.</td>
-         <td>205598</td>
+         <td>199665</td>
      </tr>
      <tr>  <!-- tr:nth-child(6) -->
          <td>Vol.20<sup>o</sup></td>
-         <td>206126</td>
+         <td>199857</td>
      </tr>
      <tr>  <!-- tr:nth-child(7) -->
-         <td colspan="2">68%</td>
+         <td colspan="2">66%</td>
      </tr>
      <tr>  <!-- tr:nth-child(8) -->
-         <td colspan="2">22:21:09</td>
+         <td colspan="2">13:07:25</td>
      </tr>
  </table>
 </div>
-<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #333300, #FFFF00);"></div>
+<div class="bar-container-tanque"><div class="bar" style="height: 132px; background: linear-gradient(to top, #333300, #FFFF00);"></div>
                 <table class="custom-table" style="color:#FFFF00;">
                     <tr> <!-- tr:nth-child(1) -->
          <td>TQ-05</td>
@@ -251,32 +247,32 @@ html, body {  /* new */
      </tr>
      <tr>   <!-- tr:nth-child(3) -->
          <td>Temp.</td>
-         <td>17,4</td>
+         <td>19,4</td>
      </tr>
      <tr>  <!-- tr:nth-child(4) -->
          <td>Nível</td>
-         <td>4060</td>
+         <td>3940</td>
      </tr>
      <tr>  <!-- tr:nth-child(5) -->
          <td>Vol.</td>
-         <td>347020</td>
+         <td>336842</td>
      </tr>
      <tr>  <!-- tr:nth-child(6) -->
          <td>Vol.20<sup>o</sup></td>
-         <td>348110</td>
+         <td>337181</td>
      </tr>
      <tr>  <!-- tr:nth-child(7) -->
-         <td colspan="2">68%</td>
+         <td colspan="2">66%</td>
      </tr>
      <tr>  <!-- tr:nth-child(8) -->
-         <td colspan="2">22:21:09</td>
+         <td colspan="2">13:07:25</td>
      </tr>
  </table>
 </div>
 
 </div>
 <div class="chart-row">
-<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #331A26, #FF80C0);"></div>
+<div class="bar-container-tanque"><div class="bar" style="height: 132px; background: linear-gradient(to top, #331A26, #FF80C0);"></div>
                 <table class="custom-table" style="color:#FF80C0;">
                     <tr> <!-- tr:nth-child(1) -->
          <td>TQ-06</td>
@@ -288,29 +284,29 @@ html, body {  /* new */
      </tr>
      <tr>   <!-- tr:nth-child(3) -->
          <td>Temp.</td>
-         <td>20,3</td>
+         <td>22,5</td>
      </tr>
      <tr>  <!-- tr:nth-child(4) -->
          <td>Nível</td>
-         <td>2700</td>
+         <td>2620</td>
      </tr>
      <tr>  <!-- tr:nth-child(5) -->
          <td>Vol.</td>
-         <td>71715</td>
+         <td>69664</td>
      </tr>
      <tr>  <!-- tr:nth-child(6) -->
          <td>Vol.20<sup>o</sup></td>
-         <td>71715</td>
+         <td>69542</td>
      </tr>
      <tr>  <!-- tr:nth-child(7) -->
-         <td colspan="2">68%</td>
+         <td colspan="2">66%</td>
      </tr>
      <tr>  <!-- tr:nth-child(8) -->
-         <td colspan="2">22:21:09</td>
+         <td colspan="2">13:07:25</td>
      </tr>
  </table>
 </div>
-<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #331A26, #FF80C0);"></div>
+<div class="bar-container-tanque"><div class="bar" style="height: 132px; background: linear-gradient(to top, #331A26, #FF80C0);"></div>
                 <table class="custom-table" style="color:#FF80C0;">
                     <tr> <!-- tr:nth-child(1) -->
          <td>TQ-07</td>
@@ -322,29 +318,29 @@ html, body {  /* new */
      </tr>
      <tr>   <!-- tr:nth-child(3) -->
          <td>Temp.</td>
-         <td>20</td>
+         <td>22,2</td>
      </tr>
      <tr>  <!-- tr:nth-child(4) -->
          <td>Nível</td>
-         <td>2720</td>
+         <td>2640</td>
      </tr>
      <tr>  <!-- tr:nth-child(5) -->
          <td>Vol.</td>
-         <td>72144</td>
+         <td>70095</td>
      </tr>
      <tr>  <!-- tr:nth-child(6) -->
          <td>Vol.20<sup>o</sup></td>
-         <td>72161</td>
+         <td>69989</td>
      </tr>
      <tr>  <!-- tr:nth-child(7) -->
-         <td colspan="2">68%</td>
+         <td colspan="2">66%</td>
      </tr>
      <tr>  <!-- tr:nth-child(8) -->
-         <td colspan="2">22:21:09</td>
+         <td colspan="2">13:07:25</td>
      </tr>
  </table>
 </div>
-<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #331A26, #FF80C0);"></div>
+<div class="bar-container-tanque"><div class="bar" style="height: 132px; background: linear-gradient(to top, #331A26, #FF80C0);"></div>
                 <table class="custom-table" style="color:#FF80C0;">
                     <tr> <!-- tr:nth-child(1) -->
          <td>TQ-08</td>
@@ -356,29 +352,29 @@ html, body {  /* new */
      </tr>
      <tr>   <!-- tr:nth-child(3) -->
          <td>Temp.</td>
-         <td>23,8</td>
+         <td>26,5</td>
      </tr>
      <tr>  <!-- tr:nth-child(4) -->
          <td>Nível</td>
-         <td>4012</td>
+         <td>3894</td>
      </tr>
      <tr>  <!-- tr:nth-child(5) -->
          <td>Vol.</td>
-         <td>133697</td>
+         <td>129807</td>
      </tr>
      <tr>  <!-- tr:nth-child(6) -->
          <td>Vol.20<sup>o</sup></td>
-         <td>133324</td>
+         <td>129177</td>
      </tr>
      <tr>  <!-- tr:nth-child(7) -->
-         <td colspan="2">68%</td>
+         <td colspan="2">66%</td>
      </tr>
      <tr>  <!-- tr:nth-child(8) -->
-         <td colspan="2">22:21:09</td>
+         <td colspan="2">13:07:25</td>
      </tr>
  </table>
 </div>
-<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #333300, #FFFF00);"></div>
+<div class="bar-container-tanque"><div class="bar" style="height: 132px; background: linear-gradient(to top, #333300, #FFFF00);"></div>
                 <table class="custom-table" style="color:#FFFF00;">
                     <tr> <!-- tr:nth-child(1) -->
          <td>TQ-09</td>
@@ -390,32 +386,32 @@ html, body {  /* new */
      </tr>
      <tr>   <!-- tr:nth-child(3) -->
          <td>Temp.</td>
-         <td>20,3</td>
+         <td>22,5</td>
      </tr>
      <tr>  <!-- tr:nth-child(4) -->
          <td>Nível</td>
-         <td>4440</td>
+         <td>4310</td>
      </tr>
      <tr>  <!-- tr:nth-child(5) -->
          <td>Vol.</td>
-         <td>379658</td>
+         <td>368606</td>
      </tr>
      <tr>  <!-- tr:nth-child(6) -->
          <td>Vol.20<sup>o</sup></td>
-         <td>379658</td>
+         <td>367702</td>
      </tr>
      <tr>  <!-- tr:nth-child(7) -->
-         <td colspan="2">68%</td>
+         <td colspan="2">66%</td>
      </tr>
      <tr>  <!-- tr:nth-child(8) -->
-         <td colspan="2">22:21:09</td>
+         <td colspan="2">13:07:25</td>
      </tr>
  </table>
 </div>
 <div class="bar-container-tanque"></div>
 </div>
 <div class="chart-row">
-<div class="bar-container-tanque"></div><div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #331A00, #FF8000);"></div>
+<div class="bar-container-tanque"></div><div class="bar-container-tanque"><div class="bar" style="height: 132px; background: linear-gradient(to top, #331A00, #FF8000);"></div>
                 <table class="custom-table" style="color:#FF8000;">
                     <tr> <!-- tr:nth-child(1) -->
          <td>TQ-12</td>
@@ -427,29 +423,29 @@ html, body {  /* new */
      </tr>
      <tr>   <!-- tr:nth-child(3) -->
          <td>Temp.</td>
-         <td>22,6</td>
+         <td>25,1</td>
      </tr>
      <tr>  <!-- tr:nth-child(4) -->
          <td>Nível</td>
-         <td>4434</td>
+         <td>4303</td>
      </tr>
      <tr>  <!-- tr:nth-child(5) -->
          <td>Vol.</td>
-         <td style="color: #FF0000;">690258</td>
+         <td style="color: #FF0000;">670094</td>
      </tr>
      <tr>  <!-- tr:nth-child(6) -->
          <td>Vol.20<sup>o</sup></td>
-         <td>688513</td>
+         <td>666568</td>
      </tr>
      <tr>  <!-- tr:nth-child(7) -->
-         <td colspan="2"  style="color: rgb(255,0,0);" >68% *ALARME*</td>
+         <td colspan="2"  style="color: rgb(255,0,0);" >66% *ALARME*</td>
      </tr>
      <tr>  <!-- tr:nth-child(8) -->
-         <td colspan="2">22:21:09</td>
+         <td colspan="2">13:07:25</td>
      </tr>
  </table>
 </div>
-<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #331A00, #FF8000);"></div>
+<div class="bar-container-tanque"><div class="bar" style="height: 132px; background: linear-gradient(to top, #331A00, #FF8000);"></div>
                 <table class="custom-table" style="color:#FF8000;">
                     <tr> <!-- tr:nth-child(1) -->
          <td>TQ-13</td>
@@ -461,29 +457,29 @@ html, body {  /* new */
      </tr>
      <tr>   <!-- tr:nth-child(3) -->
          <td>Temp.</td>
-         <td>20,7</td>
+         <td>22,9</td>
      </tr>
      <tr>  <!-- tr:nth-child(4) -->
          <td>Nível</td>
-         <td>4434</td>
+         <td>4303</td>
      </tr>
      <tr>  <!-- tr:nth-child(5) -->
          <td>Vol.</td>
-         <td>381459</td>
+         <td>370332</td>
      </tr>
      <tr>  <!-- tr:nth-child(6) -->
          <td>Vol.20<sup>o</sup></td>
-         <td>381249</td>
+         <td>369233</td>
      </tr>
      <tr>  <!-- tr:nth-child(7) -->
-         <td colspan="2">68%</td>
+         <td colspan="2">66%</td>
      </tr>
      <tr>  <!-- tr:nth-child(8) -->
-         <td colspan="2">22:21:09</td>
+         <td colspan="2">13:07:25</td>
      </tr>
  </table>
 </div>
-<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #333333, #FFFFFF);"></div>
+<div class="bar-container-tanque"><div class="bar" style="height: 132px; background: linear-gradient(to top, #333333, #FFFFFF);"></div>
                 <table class="custom-table" style="color:#FFFFFF;">
                     <tr> <!-- tr:nth-child(1) -->
          <td>TQ-14</td>
@@ -495,25 +491,25 @@ html, body {  /* new */
      </tr>
      <tr>   <!-- tr:nth-child(3) -->
          <td>Temp.</td>
-         <td>20,7</td>
+         <td>22,8</td>
      </tr>
      <tr>  <!-- tr:nth-child(4) -->
          <td>Nível</td>
-         <td>4481</td>
+         <td>4349</td>
      </tr>
      <tr>  <!-- tr:nth-child(5) -->
          <td>Vol.</td>
-         <td>691288</td>
+         <td>670969</td>
      </tr>
      <tr>  <!-- tr:nth-child(6) -->
          <td>Vol.20<sup>o</sup></td>
-         <td>691288</td>
+         <td>670969</td>
      </tr>
      <tr>  <!-- tr:nth-child(7) -->
-         <td colspan="2">68%</td>
+         <td colspan="2">66%</td>
      </tr>
      <tr>  <!-- tr:nth-child(8) -->
-         <td colspan="2">22:21:09</td>
+         <td colspan="2">13:07:25</td>
      </tr>
  </table>
 </div>
@@ -524,26 +520,22 @@ html, body {  /* new */
 </div>
  <!-- Substituir aqui pela totalidade de visaoInternoLinhas_passo2 -->
     </div>
-
     <script>
-        // Salva a posição do scroll antes do recarregamento
-        window.onbeforeunload = function () {
-            localStorage.setItem("scrollPosition", window.scrollY);
-        };
-
-        // Restaura a posição ao carregar a página
-        window.onload = function () {
-            let scrollPosition = localStorage.getItem("scrollPosition");
-            if (scrollPosition) {
-                window.scrollTo(0, scrollPosition);
-            }
-        };
-
-        // Recarrega a página a cada 3 segundos
-        setTimeout(function () {
-            location.reload();
-        }, 3000);
-    </script>
-
+    // Salva a posição do scroll antes do recarregamento
+    window.onbeforeunload = function () {
+        localStorage.setItem("scrollPosition", window.scrollY);
+    };
+    // Restaura a posição ao carregar a página
+    window.onload = function () {
+        let scrollPosition = localStorage.getItem("scrollPosition");
+        if (scrollPosition) {
+            window.scrollTo(0, scrollPosition);
+        }
+    };
+    // Recarrega a página a cada 3 segundos
+    setTimeout(function () {
+        location.reload();
+    }, 3000);
+</script>
 </body>
 </html>

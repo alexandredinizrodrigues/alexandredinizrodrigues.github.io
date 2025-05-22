@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="pt">
+    <!-- TODO: verificar o script ao final da página-->
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -522,5 +524,26 @@ html, body {  /* new */
 </div>
  <!-- Substituir aqui pela totalidade de visaoInternoLinhas_passo2 -->
     </div>
+
+    <script>
+        // Salva a posição do scroll antes do recarregamento
+        window.onbeforeunload = function () {
+            localStorage.setItem("scrollPosition", window.scrollY);
+        };
+
+        // Restaura a posição ao carregar a página
+        window.onload = function () {
+            let scrollPosition = localStorage.getItem("scrollPosition");
+            if (scrollPosition) {
+                window.scrollTo(0, scrollPosition);
+            }
+        };
+
+        // Recarrega a página a cada 3 segundos
+        setTimeout(function () {
+            location.reload();
+        }, 3000);
+    </script>
+
 </body>
 </html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+   <title>DAYLER SISTEMA DE MONITORAMENTO DE TANQUES</title>
+   <meta http-equiv="refresh" content="3"> <!-- Reload automático -->
+    <style>
+       body {
+            background-color: black; /* Fundo preto */
+            color: white; /* Texto branco */
+       }
+
+html, body {  /* new */
+    width: 100%;
+    overflow-x: hidden;
+} 
+        * {
+            box-sizing: border-box;
+        }
+       .container {
+           width: 90%;
+           margin: auto;
+           text-align: center;
+       }
+       .chart-row {
+           display: flex;
+           /*flex-wrap: wrap; /* new */
+           justify-content: center;
+           align-items: flex-end;
+           height: 220px; 
+           /*height: 220dvh; /* new */
+           margin-bottom: 0;
+           /*gap: 0px; /* Reduza ou remova */
+        }
+
+
+
+        .bar-container-tanque {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+            border: 2px solid rgb(88, 113, 124);; /* Borda branca */
+            padding: 10px;
+            background-color: #030303; /* Fundo escuro nos quadros */
+            height: 220px; /* Altura fixa baseada na maior barra */
+            width: 220px; /* 180 */
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .bar {
+            width: 100px;
+            height: 220px;
+            background: linear-gradient(to top, #1436a8, #4892e7); /* Azul escuro na base para azul claro no topo */
+            margin-right: 10px;
+        }
+        .text {
+            /*font-size: 14px;
+            width: 120px;
+            font-weight: bold;
+            font-family: "Fira Code", monospace; */
+            text-align: left;
+        }
+        .custom-table {
+            width: 100%;
+            font-size: 14px;
+            border-collapse: collapse;
+            font-family: "Fira Code", monospace;
+        }
+        .custom-table td {
+            padding: 1px;
+        }
+        .custom-table td:first-child {
+            text-align: left;
+        }
+        .custom-table td:last-child {
+            text-align: right;
+            font-weight: bold;
+        }
+        .custom-table tr:nth-child(1) td { /* Sigla */
+            border-bottom: 1px solid rgb(255, 255, 255);
+        }
+        .custom-table tr:nth-child(2) td { /* Produto */
+            border-bottom: 1px solid rgb(255, 255, 255);
+            font-size: 1vw; /* Baseado na largura da tela */
+        }
+        .custom-table tr:nth-child(6) td { /* Vol 20 */
+            border-bottom: 1px solid rgb(255, 255, 255);
+        }
+        .custom-table tr:nth-child(7) td { /* Porcentual */
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            font-size: 1vw; /* Baseado na largura da tela */
+    }
+        .custom-table tr:nth-child(8) td { /* Time */
+            text-align: center;
+            color: rgb(252, 252, 252);
+            font-size: 0.7vw; /* Baseado na largura da tela */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3><div style="color: rgb(90, 128, 185);">[DAYLER SISTEMA DE MONITORAMENTO DE TANQUES]</div><div>Tanques Sudeste</h3>
+        <!-- 5 substituições com visaoTanque_passo3 para cada div -->
+<div class="chart-row">
+ <div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #003300, #00FF00);"></div>
+                <table class="custom-table" style="color:#00FF00;">
+                    <tr> <!-- tr:nth-child(1) -->
+         <td>TQ-01</td>
+          <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(2) -->
+         <td style="font-size: 0.5vw;">DIESEL MARÍTIMO</td>
+         <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(3) -->
+         <td>Temp.</td>
+         <td>17,5</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(4) -->
+         <td>Nível</td>
+         <td>4053</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(5) -->
+         <td>Vol.</td>
+         <td style="color: #FF0000;">140471</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(6) -->
+         <td>Vol.20<sup>o</sup></td>
+         <td>140809</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(7) -->
+         <td colspan="2"  style="color: rgb(255,0,0);" >68% *ALARME*</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(8) -->
+         <td colspan="2">22:21:09</td>
+     </tr>
+ </table>
+</div>
+<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #003333, #00FFFF);"></div>
+                <table class="custom-table" style="color:#00FFFF;">
+                    <tr> <!-- tr:nth-child(1) -->
+         <td>TQ-02</td>
+          <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(2) -->
+         <td>AEAC</td>
+         <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(3) -->
+         <td>Temp.</td>
+         <td>18,7</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(4) -->
+         <td>Nível</td>
+         <td>3992</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(5) -->
+         <td>Vol.</td>
+         <td>174189</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(6) -->
+         <td>Vol.20<sup>o</sup></td>
+         <td>174503</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(7) -->
+         <td colspan="2">68%</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(8) -->
+         <td colspan="2">22:21:09</td>
+     </tr>
+ </table>
+</div>
+<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #331A0D, #FF8040);"></div>
+                <table class="custom-table" style="color:#FF8040;">
+                    <tr> <!-- tr:nth-child(1) -->
+         <td>TQ-03</td>
+          <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(2) -->
+         <td>GA</td>
+         <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(3) -->
+         <td>Temp.</td>
+         <td>20,4</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(4) -->
+         <td>Nível</td>
+         <td>4060</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(5) -->
+         <td>Vol.</td>
+         <td>206753</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(6) -->
+         <td>Vol.20<sup>o</sup></td>
+         <td>206730</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(7) -->
+         <td colspan="2">68%</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(8) -->
+         <td colspan="2">22:21:09</td>
+     </tr>
+ </table>
+</div>
+<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #331A26, #FF80C0);"></div>
+                <table class="custom-table" style="color:#FF80C0;">
+                    <tr> <!-- tr:nth-child(1) -->
+         <td>TQ-04</td>
+          <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(2) -->
+         <td>S10-B</td>
+         <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(3) -->
+         <td>Temp.</td>
+         <td>17,1</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(4) -->
+         <td>Nível</td>
+         <td>4032</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(5) -->
+         <td>Vol.</td>
+         <td>205598</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(6) -->
+         <td>Vol.20<sup>o</sup></td>
+         <td>206126</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(7) -->
+         <td colspan="2">68%</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(8) -->
+         <td colspan="2">22:21:09</td>
+     </tr>
+ </table>
+</div>
+<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #333300, #FFFF00);"></div>
+                <table class="custom-table" style="color:#FFFF00;">
+                    <tr> <!-- tr:nth-child(1) -->
+         <td>TQ-05</td>
+          <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(2) -->
+         <td>AEHC</td>
+         <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(3) -->
+         <td>Temp.</td>
+         <td>17,4</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(4) -->
+         <td>Nível</td>
+         <td>4060</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(5) -->
+         <td>Vol.</td>
+         <td>347020</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(6) -->
+         <td>Vol.20<sup>o</sup></td>
+         <td>348110</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(7) -->
+         <td colspan="2">68%</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(8) -->
+         <td colspan="2">22:21:09</td>
+     </tr>
+ </table>
+</div>
+
+</div>
+<div class="chart-row">
+<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #331A26, #FF80C0);"></div>
+                <table class="custom-table" style="color:#FF80C0;">
+                    <tr> <!-- tr:nth-child(1) -->
+         <td>TQ-06</td>
+          <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(2) -->
+         <td>S10-B</td>
+         <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(3) -->
+         <td>Temp.</td>
+         <td>20,3</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(4) -->
+         <td>Nível</td>
+         <td>2700</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(5) -->
+         <td>Vol.</td>
+         <td>71715</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(6) -->
+         <td>Vol.20<sup>o</sup></td>
+         <td>71715</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(7) -->
+         <td colspan="2">68%</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(8) -->
+         <td colspan="2">22:21:09</td>
+     </tr>
+ </table>
+</div>
+<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #331A26, #FF80C0);"></div>
+                <table class="custom-table" style="color:#FF80C0;">
+                    <tr> <!-- tr:nth-child(1) -->
+         <td>TQ-07</td>
+          <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(2) -->
+         <td>S10-B</td>
+         <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(3) -->
+         <td>Temp.</td>
+         <td>20</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(4) -->
+         <td>Nível</td>
+         <td>2720</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(5) -->
+         <td>Vol.</td>
+         <td>72144</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(6) -->
+         <td>Vol.20<sup>o</sup></td>
+         <td>72161</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(7) -->
+         <td colspan="2">68%</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(8) -->
+         <td colspan="2">22:21:09</td>
+     </tr>
+ </table>
+</div>
+<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #331A26, #FF80C0);"></div>
+                <table class="custom-table" style="color:#FF80C0;">
+                    <tr> <!-- tr:nth-child(1) -->
+         <td>TQ-08</td>
+          <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(2) -->
+         <td>S10-B</td>
+         <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(3) -->
+         <td>Temp.</td>
+         <td>23,8</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(4) -->
+         <td>Nível</td>
+         <td>4012</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(5) -->
+         <td>Vol.</td>
+         <td>133697</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(6) -->
+         <td>Vol.20<sup>o</sup></td>
+         <td>133324</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(7) -->
+         <td colspan="2">68%</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(8) -->
+         <td colspan="2">22:21:09</td>
+     </tr>
+ </table>
+</div>
+<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #333300, #FFFF00);"></div>
+                <table class="custom-table" style="color:#FFFF00;">
+                    <tr> <!-- tr:nth-child(1) -->
+         <td>TQ-09</td>
+          <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(2) -->
+         <td>AEHC</td>
+         <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(3) -->
+         <td>Temp.</td>
+         <td>20,3</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(4) -->
+         <td>Nível</td>
+         <td>4440</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(5) -->
+         <td>Vol.</td>
+         <td>379658</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(6) -->
+         <td>Vol.20<sup>o</sup></td>
+         <td>379658</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(7) -->
+         <td colspan="2">68%</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(8) -->
+         <td colspan="2">22:21:09</td>
+     </tr>
+ </table>
+</div>
+<div class="bar-container-tanque"></div>
+</div>
+<div class="chart-row">
+<div class="bar-container-tanque"></div><div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #331A00, #FF8000);"></div>
+                <table class="custom-table" style="color:#FF8000;">
+                    <tr> <!-- tr:nth-child(1) -->
+         <td>TQ-12</td>
+          <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(2) -->
+         <td>GAS-C</td>
+         <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(3) -->
+         <td>Temp.</td>
+         <td>22,6</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(4) -->
+         <td>Nível</td>
+         <td>4434</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(5) -->
+         <td>Vol.</td>
+         <td style="color: #FF0000;">690258</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(6) -->
+         <td>Vol.20<sup>o</sup></td>
+         <td>688513</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(7) -->
+         <td colspan="2"  style="color: rgb(255,0,0);" >68% *ALARME*</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(8) -->
+         <td colspan="2">22:21:09</td>
+     </tr>
+ </table>
+</div>
+<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #331A00, #FF8000);"></div>
+                <table class="custom-table" style="color:#FF8000;">
+                    <tr> <!-- tr:nth-child(1) -->
+         <td>TQ-13</td>
+          <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(2) -->
+         <td>GAS-C</td>
+         <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(3) -->
+         <td>Temp.</td>
+         <td>20,7</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(4) -->
+         <td>Nível</td>
+         <td>4434</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(5) -->
+         <td>Vol.</td>
+         <td>381459</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(6) -->
+         <td>Vol.20<sup>o</sup></td>
+         <td>381249</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(7) -->
+         <td colspan="2">68%</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(8) -->
+         <td colspan="2">22:21:09</td>
+     </tr>
+ </table>
+</div>
+<div class="bar-container-tanque"><div class="bar" style="height: 136px; background: linear-gradient(to top, #333333, #FFFFFF);"></div>
+                <table class="custom-table" style="color:#FFFFFF;">
+                    <tr> <!-- tr:nth-child(1) -->
+         <td>TQ-14</td>
+          <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(2) -->
+         <td>PRODUÇÃO</td>
+         <td></td>
+     </tr>
+     <tr>   <!-- tr:nth-child(3) -->
+         <td>Temp.</td>
+         <td>20,7</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(4) -->
+         <td>Nível</td>
+         <td>4481</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(5) -->
+         <td>Vol.</td>
+         <td>691288</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(6) -->
+         <td>Vol.20<sup>o</sup></td>
+         <td>691288</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(7) -->
+         <td colspan="2">68%</td>
+     </tr>
+     <tr>  <!-- tr:nth-child(8) -->
+         <td colspan="2">22:21:09</td>
+     </tr>
+ </table>
+</div>
+<div class="bar-container-tanque"></div>
+</div>
+<div class="chart-row">
+<div class="bar-container-tanque"></div><div class="bar-container-tanque"></div><div class="bar-container-tanque"></div><div class="bar-container-tanque"></div><div class="bar-container-tanque"></div>
+</div>
+ <!-- Substituir aqui pela totalidade de visaoInternoLinhas_passo2 -->
+    </div>
+</body>
+</html>
